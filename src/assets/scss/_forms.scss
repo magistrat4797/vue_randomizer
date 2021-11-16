@@ -1,0 +1,26 @@
+@charset "UTF-8";
+@import 'libs/_lib';
+
+input[type="text"], 
+input[type="email"] {
+    display: block;
+    width: 100%;
+    padding: 0 15px;
+    @include eqbox(45px, 1px);
+    border: 1px solid rgba(0, 0, 0, 0.45);
+    border-radius: $border-radius;
+    background-color: $input-background-color;
+    color: $form-color;
+    font-size: 15px;
+    font-weight: $base-font-weight;
+    font-family: $base-font;
+    transition: box-shadow 0.15s ease-in-out;
+    margin-bottom: 20px;
+    @include outline-remove;
+    @include placeholder {
+        color: $form-color;
+    }
+    &:focus {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.45);
+    }
+}
